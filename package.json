@@ -1,0 +1,27 @@
+{
+  "name": "console-progress-loader",
+  "version": "0.0.1",
+  "description": "This package provide simple and customizable loader.",
+  "main": "./dist/index.js",
+  "repository": "https://github.com/keiya01/console-progress-loader",
+  "author": "keiya01",
+  "license": "MIT",
+  "scripts": {
+    "start": "ts-node",
+    "build": "tsc",
+    "test": "jest"
+  },
+  "jest": {
+    "transform": {
+      "^.+\\.ts?$": "ts-jest"
+    }
+  },
+  "dependencies": {
+    "@types/node": "^12.0.7",
+    "typescript": "^3.5.1"
+  },
+  "devDependencies": {
+    "@types/jest": "^24.0.13",
+    "jest": "^24.8.0"
+  }
+}
