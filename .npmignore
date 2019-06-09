@@ -1,3 +1,5 @@
 tsconfig.json
 src/
 src/__test__/
+node_mosules/progress-loader
+examples/

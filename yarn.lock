@@ -2715,6 +2715,14 @@ process-nextick-args@~2.0.0:
   resolved "https://registry.yarnpkg.com/process-nextick-args/-/process-nextick-args-2.0.0.tgz#a37d732f4271b4ab1ad070d35508e8290788ffaa"
   integrity sha512-MtEC1TqN0EU5nephaJ4rAtThHtC86dNN9qCuEhtshvpVBkAW5ZO7BASN9REnF9eoXGcRub+pFuKEpOHE+HbEMw==
 
+progress-loader@^0.0.2:
+  version "0.0.2"
+  resolved "https://registry.yarnpkg.com/progress-loader/-/progress-loader-0.0.2.tgz#49056843b446e9cfc6172528da4422bf985229ee"
+  integrity sha512-lsB1+ZWMJ3IVLiTSOyaM/h9uYrTOha5LbXt1wrm2b3VWMxoOzQYf7x5Wpzq5LY2+O1iwFvvYsRvhRMFkeKdtNw==
+  dependencies:
+    "@types/node" "^12.0.7"
+    typescript "^3.5.1"
+
 prompts@^2.0.1:
   version "2.1.0"
   resolved "https://registry.yarnpkg.com/prompts/-/prompts-2.1.0.tgz#bf90bc71f6065d255ea2bdc0fe6520485c1b45db"
