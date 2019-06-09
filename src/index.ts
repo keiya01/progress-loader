@@ -1,3 +1,3 @@
 import Loader from "./loader";
 
-export default Loader;
+module.exports = Loader;
