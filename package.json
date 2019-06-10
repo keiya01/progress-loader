@@ -1,6 +1,6 @@
 {
   "name": "progress-loader",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "This package provide simple and customizable loader.",
   "main": "./dist/index.js",
   "repository": "https://github.com/keiya01/console-progress-loader",
