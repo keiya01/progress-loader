@@ -135,15 +135,12 @@ export default class Loader {
     }
 
     let count = 1;
-    const diff = percentage - this.percentage;
     const advanceProgressBar = this.updateProgressBar(percentage);
-    if (percentage === 100) {
-      process.stdout.write(`completed! ${this.progressBar.join("")} ... 100%\r`);
-    }
-
+    
     const interval = setInterval(() => {
-      if (count > diff) {
+      if (this.percentage >= 100) {
         this.resetTimer();
+        process.stdout.write(`completed! ${this.progressBar.join("")} ... 100%\r\n`);
         return;
       }
       // reset

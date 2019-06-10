@@ -4,26 +4,18 @@ const loader = new Loader();
 
 let completed = 0;
 const download = (delay, total) => {
-  (function timeoutSync(done) {
-    if(done) {
-      loader.printProgressBar(100, completed);
-      return;
-    }
-    
-    setTimeout(() => {
+    const timer = setInterval(() => {
       if (completed < total) {
         loader.printProgressBar((completed / (total - 1)) * 100, completed);
       }
       
       if (completed === total) {
-        timeoutSync(true);
+        clearInterval(timer);
         return;
       }
-      completed++;
 
-      timeoutSync(false);
+      completed++;
     }, delay)
-  })(false);
 }
 
 const main = (total) => {
