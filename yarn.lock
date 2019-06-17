@@ -2741,6 +2741,15 @@ progress-loader@^0.0.5:
     progress-loader "^0.0.3"
     typescript "^3.5.1"
 
+progress-loader@^0.0.6:
+  version "0.0.6"
+  resolved "https://registry.yarnpkg.com/progress-loader/-/progress-loader-0.0.6.tgz#70d6fe2c89e9f25fbdb0bb4241676ff416bfc77f"
+  integrity sha512-hJTd/hHVMaEjAiOY5ETIqxjx0VbKlP0SofCGypU33hATIzDmg98O5ZaDlZAXrN45j9pogDSjcc4LT9yaj3vgcg==
+  dependencies:
+    "@types/node" "^12.0.7"
+    progress-loader "^0.0.5"
+    typescript "^3.5.1"
+
 prompts@^2.0.1:
   version "2.1.0"
   resolved "https://registry.yarnpkg.com/prompts/-/prompts-2.1.0.tgz#bf90bc71f6065d255ea2bdc0fe6520485c1b45db"
