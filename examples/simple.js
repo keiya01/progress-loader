@@ -1,4 +1,4 @@
-const Loader = require("../src");
+const Loader = require("progress-loader");
 
 const loader = new Loader("#");
 
