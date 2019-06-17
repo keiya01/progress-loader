@@ -17,6 +17,11 @@ export default class Loader {
     this.progressBarPoints = [];
   }
 
+  // Push optionable loading string
+  push(loadingString: string) {
+    return this.progressBarPoints.push(loadingString);
+  }
+
   getProgressBar(columns: number) {
     if (columns <= 0) {
       throw new Error("Column less than 0 can not be specified");
@@ -82,7 +87,7 @@ export default class Loader {
       const modifiedProgressBarPercentage = percentage - prevProgressPercentage;
       const prevTotalIncreasingAmount = Math.floor(this.totalSpace * (modifiedProgressBarPercentage / 100));
       [...Array(prevTotalIncreasingAmount)].forEach(() => {
-        this.progressBarPoints.push("=");
+        this.push("=");
       });
 
       const totalProgressBarPoints = this.progressBarPoints.length;
@@ -105,7 +110,7 @@ export default class Loader {
         return true;
       }
 
-      const totalProgressBarPoints = this.progressBarPoints.push("=");
+      const totalProgressBarPoints = this.push("=");
       this.progressBar = [
         "[",
         ...this.progressBarPoints,
