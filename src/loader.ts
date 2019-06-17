@@ -1,13 +1,15 @@
 const readLine = require("readline");
 
 export default class Loader {
+  public loadingString: string;
   public percentage: number;
   public timerQueue: NodeJS.Timeout[];
   public progressBar: string[];
   public totalSpace: number;
   private progressBarPoints: string[];
 
-  constructor() {
+  constructor(loadingString: string = "=") {
+    this.loadingString = loadingString;
     this.percentage = 0;
     this.timerQueue = [];
     const columns = process.stdout.columns || 50;
@@ -18,8 +20,8 @@ export default class Loader {
   }
 
   // Push optionable loading string
-  push(loadingString: string) {
-    return this.progressBarPoints.push(loadingString);
+  push() {
+    return this.progressBarPoints.push(this.loadingString);
   }
 
   getProgressBar(columns: number) {
@@ -87,7 +89,7 @@ export default class Loader {
       const modifiedProgressBarPercentage = percentage - prevProgressPercentage;
       const prevTotalIncreasingAmount = Math.floor(this.totalSpace * (modifiedProgressBarPercentage / 100));
       [...Array(prevTotalIncreasingAmount)].forEach(() => {
-        this.push("=");
+        this.push();
       });
 
       const totalProgressBarPoints = this.progressBarPoints.length;
@@ -110,7 +112,7 @@ export default class Loader {
         return true;
       }
 
-      const totalProgressBarPoints = this.push("=");
+      const totalProgressBarPoints = this.push();
       this.progressBar = [
         "[",
         ...this.progressBarPoints,

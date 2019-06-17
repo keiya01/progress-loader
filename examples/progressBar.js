@@ -1,6 +1,6 @@
-const Loader = require("progress-loader");
+const Loader = require("../src");
 
-const loader = new Loader();
+const loader = new Loader("#");
 
 let completed = 0;
 const download = (delay, total) => {
