@@ -7,6 +7,13 @@
 # Installation
 - `yarn add progress-loader` or `npm i progress-loader`
 
+# Usage
+```
+const loader = new Loader("=");
+loader.printProgressBar(30, "word");
+// => word [==========                    ] 30%
+```
+
 # Examples
 - [simple_loader](https://github.com/keiya01/progress-loader/blob/master/examples/simple.js)
 
