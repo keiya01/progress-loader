@@ -3,7 +3,7 @@
   "version": "0.0.6",
   "description": "This package provide simple and customizable loader.",
   "main": "./dist/index.js",
-  "repository": "https://github.com/keiya01/console-progress-loader",
+  "repository": "https://github.com/keiya01/progress-loader",
   "author": "keiya01",
   "license": "MIT",
   "scripts": {
